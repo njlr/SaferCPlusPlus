@@ -14,6 +14,7 @@
 #include <unordered_set>
 #include <functional>
 #include <cassert>
+#include <string>
 
 
 #if defined(MSE_SAFER_SUBSTITUTES_DISABLED) || defined(MSE_SAFERPTR_DISABLED)
@@ -115,7 +116,7 @@ namespace mse {
 							m_fm1_num_pointers = 1;
 						}
 					}
-					else 
+					else
 #endif // MSE_RP_SPECIAL_CASE_OPTIMIZATIONS
 					{
 						m_fm1_ptr_to_regptr_array[m_fm1_num_pointers] = (&sp_ref);
@@ -154,7 +155,7 @@ namespace mse {
 					}
 					else { /* There are no registered pointers to be unregistered. */ assert(false); }
 				}
-				else 
+				else
 #endif // MSE_RP_SPECIAL_CASE_OPTIMIZATIONS
 				{
 					int found_index = -1;
@@ -207,7 +208,7 @@ namespace mse {
 						m_fm1_num_pointers = 0;
 					}
 				}
-				else 
+				else
 #endif // MSE_RP_SPECIAL_CASE_OPTIMIZATIONS
 				{
 					for (int i = 0; i < m_fm1_num_pointers; i += 1) {
